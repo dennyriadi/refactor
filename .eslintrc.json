@@ -1,0 +1,38 @@
+{
+  "env": {
+  "es6": true,
+    "node": true,
+    "browser": true,
+    "jest": true
+},
+  "extends": ["airbnb"],
+  "parserOptions": {
+  "ecmaVersion": 8,
+    "ecmaFeatures": {
+    "jsx": true,
+      "experimentalObjectRestSpread": true
+  }
+},
+  "plugins": [],
+  "rules": {
+  "arrow-parens": 0,
+    "comma-dangle": [2, { "arrays": "always-multiline", "objects": "always-multiline", "imports": "always-multiline", "exports": "always-multiline", "functions": "ignore" }],
+    "consistent-return": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/prefer-default-export": 0,
+    "jsx-a11y/href-no-hash": 0,
+    "jsx-a11y/img-has-alt": 0,
+    "linebreak-style": 0,
+    "max-len": 0,
+    "no-confusing-arrow": 0,
+    "no-console": 0,
+    "no-underscore-dangle": ["error", { "allow": ["__", "_id", "_trackJs"] }],
+    "react/forbid-prop-types": 0,
+    "react/jsx-closing-bracket-location": 0,
+    "react/jsx-indent-props": 0,
+    "react/jsx-wrap-multilines": 0,
+    "react/jsx-tag-spacing": [1, { "beforeSelfClosing": "always" }],
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx"] }],
+    "react/no-danger": 0
+  }
+}
