@@ -3,8 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "datastore": "^1.8.2",
     "express": "^4.15.5",
+    "express-validation": "^1.0.2",
     "isomorphic-fetch": "^2.2.1",
+    "joi": "^11.1.1",
+    "nedb": "^1.8.0",
     "querystring": "^0.2.0",
     "ramda": "^0.24.1",
     "react": "^16.0.0",
@@ -17,12 +21,13 @@
     "redux-saga": "^0.15.6"
   },
   "scripts": {
-    "clean": "rimraf ./public -s",
-    "build": "npm run clean && webpack",
+    "prebuild": "rimraf ./public -s",
+    "build": "webpack",
+    "start": "npm run build && node server/index.js",
     "test": "react-scripts test --env=jsdom",
     "lint": "eslint --ext .js src server"
   },
-  "proxy": "http://localhost:8081/",
+  "proxy": "http://localhost:3000/",
   "devDependencies": {
     "autoprefixer": "^7.1.4",
     "babel-cli": "^6.26.0",

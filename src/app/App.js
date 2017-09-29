@@ -1,7 +1,7 @@
 import R from 'ramda';
 import React from 'react';
 import PropTypes from 'prop-types';
-import SearchPanel from './SearchPanel';
+import SearchPanel from './components/SearchPanel';
 
 class App extends React.Component {
   componentDidMount() {

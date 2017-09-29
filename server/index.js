@@ -7,7 +7,7 @@ app.use(express.static('./public'));
 app.use('/api/', indexRoute);
 app.use('/api/people', peopleRoute);
 
-const port = 8081;
+const port = 3000;
 
 app.listen(port, () => {
   console.info(`API listening on: ${port}`);

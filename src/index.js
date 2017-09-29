@@ -4,7 +4,7 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import './sass/style.scss';
 import configureStore from './store';
-import App from './routes/app/AppContainer';
+import App from './app/AppContainer';
 
 const store = configureStore();
 
