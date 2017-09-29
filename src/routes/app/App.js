@@ -1,7 +1,7 @@
 import R from 'ramda';
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import SearchPanel from './SearchPanel';
 
 class App extends React.Component {
   componentDidMount() {
@@ -9,10 +9,11 @@ class App extends React.Component {
   }
 
   render() {
-    const { people } = this.props;
+    const { people, getPeople } = this.props;
     return (
       <div>
         <h1>People</h1>
+        <SearchPanel search={getPeople} />
         {R.map(R.propOr('Denny', 'name'))(people)}
       </div>
     );
@@ -22,7 +23,6 @@ class App extends React.Component {
 App.propTypes = {
   getPeople: PropTypes.func.isRequired,
   people: PropTypes.array.isRequired,
-
 };
 
 export default App;

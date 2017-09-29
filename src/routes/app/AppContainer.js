@@ -5,7 +5,7 @@ import { getPeople } from '../../state/people/actions';
 const mapStateToProps = state => ({ people: state.people });
 
 const mapDispatchToProps = dispatch => ({
-  getPeople: () => dispatch(getPeople()),
+  getPeople: payload => dispatch(getPeople(payload)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
