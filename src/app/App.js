@@ -2,6 +2,7 @@ import R from 'ramda';
 import React from 'react';
 import PropTypes from 'prop-types';
 import SearchPanel from './components/SearchPanel';
+import PeopleList from './components/PeopleList';
 
 class App extends React.Component {
   componentDidMount() {
@@ -14,7 +15,7 @@ class App extends React.Component {
       <div>
         <h1>People</h1>
         <SearchPanel search={getPeople} />
-        {R.map(R.propOr('Denny', 'name'))(people)}
+        <PeopleList people={people} />
       </div>
     );
   }

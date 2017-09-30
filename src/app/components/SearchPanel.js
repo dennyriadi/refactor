@@ -30,7 +30,7 @@ const SearchPanel = props => {
   };
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid p-3">
       <form onSubmit={onSubmit}>
         <div className="form-group">
           <label className="col-2">Gender:</label>
