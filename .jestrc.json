@@ -2,14 +2,14 @@
   "cacheDirectory": "<rootDir>/tmp/tests_cache",
   "collectCoverage": true,
   "collectCoverageFrom": [
-    "server/**/*.{js}"
+    "server/**/*.{js}",
+    "src/**/*.{js}"
   ],
   "coverageReporters": [
     "json",
     "lcov",
     "text"
   ],
-  "testEnvironment": "node",
   "verbose": true,
   "unmockedModulePathPatterns": [
     "<rootDir>/node_modules"

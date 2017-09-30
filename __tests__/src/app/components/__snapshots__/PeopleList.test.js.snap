@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PeopleList /> render() should render correctly 1`] = `
+<div
+  className="container-fluid"
+>
+  <ul
+    className="list-group"
+  >
+    <li
+      className="list-group-item list-group-item-info"
+    >
+      John (30)
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`<PeopleList /> render() should render without people list 1`] = `
+<div
+  className="container-fluid"
+>
+  <ul
+    className="list-group"
+  />
+</div>
+`;

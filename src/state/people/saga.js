@@ -1,8 +1,10 @@
 import R from 'ramda';
 import { call, put, takeLatest } from 'redux-saga/effects';
 import qs from 'querystring';
-import { get } from '../apiCall';
+import { get } from '../request';
 import { PEOPLE_GET_REQUESTED, PEOPLE_GET_SUCCESSFUL } from './types';
+
+const apiEndpoint = '/api/people';
 
 function* onGetPeople({ payload }) {
   const buildAgeParam = (age, ageRange) => {
@@ -32,7 +34,7 @@ function* onGetPeople({ payload }) {
     );
   };
 
-  const response = yield call(() => get(`/api/people?${queryParams(payload)}`));
+  const response = yield call(() => get(`${apiEndpoint}?${queryParams(payload)}`));
   if (!response.error) {
     yield put({
       type: PEOPLE_GET_SUCCESSFUL,

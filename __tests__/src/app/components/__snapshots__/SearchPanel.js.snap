@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchPanel /> render() should render correctly 1`] = `
+<withState(withState(SearchPanel))
+  gender=""
+  search={[Function]}
+  setGender={[Function]}
+/>
+`;
