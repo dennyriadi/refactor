@@ -1,4 +1,3 @@
-import R from 'ramda';
 import React from 'react';
 import PropTypes from 'prop-types';
 import SearchPanel from './components/SearchPanel';

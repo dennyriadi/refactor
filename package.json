@@ -2,7 +2,17 @@
   "name": "refactor",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "pretest": "eslint --ext .js src server __tests__",
+    "test": "jest --config .jestrc.json",
+    "prebuild": "rimraf ./public -s",
+    "build": "webpack",
+    "start": "npm run build && node server/index.js"
+  },
+  "proxy": "http://localhost:3000/",
   "dependencies": {
+    "bunyan": "^1.8.12",
+    "bunyan-middleware": "^0.8.0",
     "datastore": "^1.8.2",
     "express": "^4.15.5",
     "express-validation": "^1.0.2",
@@ -21,14 +31,6 @@
     "redux-saga": "^0.15.6",
     "uuid": "^3.1.0"
   },
-  "scripts": {
-    "prebuild": "rimraf ./public -s",
-    "build": "webpack",
-    "start": "npm run build && node server/index.js",
-    "test": "react-scripts test --env=jsdom",
-    "lint": "eslint --ext .js src server"
-  },
-  "proxy": "http://localhost:3000/",
   "devDependencies": {
     "autoprefixer": "^7.1.4",
     "babel-cli": "^6.26.0",
@@ -46,11 +48,13 @@
     "eslint-plugin-react": "^7.4.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^2.30.1",
+    "jest": "^21.2.1",
     "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.6",
     "resolve-url-loader": "^2.1.0",
     "rimraf": "^2.6.2",
     "sass-loader": "^6.0.6",
+    "supertest": "^3.0.0",
     "webpack": "^3.6.0"
   }
 }
