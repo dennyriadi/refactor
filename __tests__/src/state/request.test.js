@@ -1,4 +1,4 @@
-jest.mock('isomorphic-fetch', () => jest.fn(() => Promise.resolve()));
+jest.mock('isomorphic-fetch', () => jest.fn(() => Promise.reject()));
 
 import fetch from 'isomorphic-fetch';
 import { get } from '../../../src/state/request';

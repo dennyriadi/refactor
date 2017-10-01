@@ -54,7 +54,7 @@
     "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.6",
     "react-addons-test-utils": "15.6.0",
-    "react-test-renderer": "^16.0.0",
+    "react-test-renderer": "15.6.1",
     "resolve-url-loader": "^2.1.0",
     "rimraf": "^2.6.2",
     "sass-loader": "^6.0.6",

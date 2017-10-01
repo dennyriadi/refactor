@@ -9,7 +9,6 @@ Check code quality (Using ESLint with AirBnB config) and run unit tests
 
 To run:
 ```
-npm run build
 npm start
 ```
 Browse to [http://localhost:3000](http://localhost:3000)
